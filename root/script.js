@@ -48,8 +48,7 @@ function convertRelativePathsToAbsolute(html, baseUrl) {
 
     doc.querySelectorAll('link').forEach(link => {
         const href = link.getAttribute('href');
-        if (href && !href.startsWith('http') && !href.
-            startsWith('data:')) {
+        if (href && !href.startsWith('http') && !href.startsWith('data:')) {
             link.href = new URL(href, base).href;
         }
     });
@@ -97,10 +96,7 @@ document.getElementById('historyButton').addEventListener('click', () => {
     history.forEach(item => {
         const historyItem = document.createElement('div');
         historyItem.className = 'history-item';
-        historyItem.innerHTML =区域。
-
-<!DOCTYPE html>
-<html lang="zh"
+        historyItem.innerHTML = `${item.name} - ${item.timestamp}`;
         historyList.appendChild(historyItem);
     });
 });
