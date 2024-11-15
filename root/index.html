@@ -17,7 +17,7 @@
             const url = document.getElementById('urlInput').value.trim();
             if (url) {
                 // 调用 Vercel 上的 CORS 代理服务
-                fetch(`/api/cors-proxy?url=${encodeURIComponent(url)}`)
+                fetch(`https://sssioon-web-beryl.vercel.app/api/cors-proxy?url=${encodeURIComponent(url)}`)
                     .then(response => response.text())
                     .then(html => {
                         // 显示获取的网页内容
